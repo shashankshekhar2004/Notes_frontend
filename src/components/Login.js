@@ -19,7 +19,7 @@ function Login({ setIsLogin }) {
     const registerSubmit = async e => {
         e.preventDefault();
         try {
-            const res = await axios.post('/users/register', {
+            const res = await axios.post('https://notes-backend-kbxm.onrender.com/users/register', {
                 username: user.username, // Include username field
                 email: user.email,
                 password: user.password
@@ -35,7 +35,7 @@ function Login({ setIsLogin }) {
     const loginSubmit = async e => {
         e.preventDefault();
         try {
-            const res = await axios.post('/users/login', {
+            const res = await axios.post('https://notes-backend-kbxm.onrender.com/users/login', {
                 email: user.email,
                 password: user.password
             });
