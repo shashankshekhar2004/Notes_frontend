@@ -23,7 +23,7 @@ function CreateNotes() {
         const { title, content, date } = note;
         const newNote = { title, content, date };
 
-        await axios.post('/api/notes', newNote, {
+        await axios.post('https://notes-backend-kbxm.onrender.com/api/notes', newNote, {
           headers: { Authorization: token }
         });
 

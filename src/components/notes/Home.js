@@ -9,7 +9,7 @@ function Home() {
 
     const getNotes = async (token) => {
         try {
-            const res = await axios.get('api/notes', {
+            const res = await axios.get('https://notes-backend-kbxm.onrender.com/api/notes', {
                 headers: { Authorization: token }
             });
             setNotes(res.data);
@@ -29,7 +29,7 @@ function Home() {
     const deleteNote = async (id) => {
         try {
             if (token) {
-                await axios.delete(`api/notes/${id}`, {
+                await axios.delete(`https://notes-backend-kbxm.onrender.com/api/notes/${id}`, {
                     headers: { Authorization: token }
                 });
                 // Refresh the notes after deletion

@@ -18,7 +18,7 @@ export default function EditNote() {
             try {
                 const token = localStorage.getItem('tokenStore');
                 if (id && token) {
-                    const res = await axios.get(`/api/notes/${id}`, {
+                    const res = await axios.get(`https://notes-backend-kbxm.onrender.com/api/notes/${id}`, {
                         headers: { Authorization: token }
                     });
                     setNote({
@@ -48,7 +48,7 @@ export default function EditNote() {
                 const { title, content, date, id } = note;
                 const newNote = { title, content, date };
 
-                await axios.put(`/api/notes/${id}`, newNote, {
+                await axios.put(`https://notes-backend-kbxm.onrender.com/api/notes/${id}`, newNote, {
                     headers: { Authorization: token }
                 });
                 
