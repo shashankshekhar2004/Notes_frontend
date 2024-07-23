@@ -1,0 +1,311 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px 0; 
+}
+
+header .header-content {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px; /* Add padding to the sides */
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.notes-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background: rgba(40, 21, 131, 0.7);
+  color: whitesmoke;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+body {
+  background: rgb(16, 122, 28);
+  color: whitesmoke;
+}
+
+.notes-page {
+  width: 100%;
+  min-height: 100vh;
+  color: whitesmoke;
+}
+
+.notes-page header {
+  max-width: 1920px;
+  max-height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.notes-page header .logo {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+.notes-page header ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.notes-page header ul li a {
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.notes-page header ul li a:hover {
+  opacity: 1;
+}
+
+.notes-page section {
+  width: 100%;
+  box-shadow: 0 0 5px rgb(63, 7, 41);
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.note-wrapper {
+  max-width: 1920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.card {
+  width: 300px;
+  background: rgb(86, 5, 45);
+  padding: 10px;
+  position: relative;
+  color: #ddd;
+  margin: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.card .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 900;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+}
+
+.card h4 {
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card .text-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+  margin: 10px 0;
+  color: #fff9;
+}
+
+.card .date {
+  text-align: right;
+  color: wheat;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.create-note {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  border: 10px solid #dd3939;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.create-note h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+
+.create-note .row {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.create-note input,
+.create-note button {
+  width: 100%;
+  height: 40px;
+  padding: 0 5px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+}
+
+.create-note input {
+  background: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
+}
+
+.create-note label {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.create-note textarea {
+  width: 100%;
+  resize: none;
+  padding: 0 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
+  border: none;
+  outline: none;
+}
+
+.create-note button {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: rgb(7, 25, 63);
+  background: #dd3939;
+  transition: background 0.3s;
+}
+
+.create-note button:hover {
+  background: #bb2d2d;
+}
+
+@media (max-width: 500px) {
+  .create-note {
+    padding: 15px;
+    border: 5px solid #903030;
+  }
+}
+
+.login-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.login-page h2,
+.login-page h3 {
+  color: #fff8;
+}
+
+.login-page h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.login-page p {
+  margin: 10px 0;
+  color: rgb(162, 182, 50);
+}
+
+.login-page span:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.login input,
+.register input {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
+}
+
+.login,
+.register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
